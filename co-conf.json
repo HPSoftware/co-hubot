@@ -1,0 +1,9 @@
+{
+   "COLogin": "chatops_integration_user" ,
+   "COPassword": "chatops_integration_passwd",
+   "COHost":  "allin3.ind.hp.com",
+   "COPort":   8444,
+   "COContextRoot":  "",
+   "COProtocol": "https",
+   "rejectUnauthorized": true
+}

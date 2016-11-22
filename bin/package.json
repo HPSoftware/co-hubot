@@ -1,0 +1,16 @@
+{
+  "name": "dynamite",
+  "version": "0.0.0",
+  "private": true,
+
+  "author": "rahul",
+
+  "description": "let's chat",
+
+  "dependencies": {
+  },
+
+  "engines": {
+    "node": "0.10.x"
+  }
+}

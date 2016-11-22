@@ -1,0 +1,71 @@
+labels:
+  severity: Severity
+  affectedService: Affected Service
+
+style:
+  colors:
+    High: danger
+
+templates:
+  kick_off_warroom: |
+    {
+      "text": "Health Summary of {@b}{id}{/b} ",
+      "parts":[
+        {
+          "title": "{title1}",
+          "text": "{description1}",
+          "color": "{severity1|color}",
+          "fields": [
+             {
+               "value": "{severity1}"
+             },
+             {
+               "value": "{affectedService.name}"
+             }
+          ]
+        },
+        {
+          "title": "{title2}",
+          "text": "{description2}",
+          "color": "{severity2|color}",
+          "fields": [
+             {
+               "value": "{severity2}"
+             },
+             {
+               "value": "{affectedService.name}"
+             }
+          ]
+        },
+        {
+          "title": "{title3}",
+          "text": "{description3}",
+          "color": "{severity3|color}",
+          "fields": [
+             {
+               "value": "{severity3}"
+             },
+             {
+               "value": "{affectedService.name}"
+             }
+          ]
+        },
+        {
+          "title": "{title4}",
+          "text": "{description4}",
+          "color": "{severity4|color}",
+          "fields": [
+             {
+               "value": "{severity4}"
+             },
+             {
+               "value": "{affectedService.name}"
+             }
+          ]
+        },
+        {
+          "title": "{title5}"
+        }
+
+      ]
+    }

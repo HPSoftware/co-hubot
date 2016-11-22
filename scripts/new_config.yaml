@@ -1,0 +1,75 @@
+labels:
+  affectedService: Recommended CPU Allocation
+  severity: Current CPU Allocation
+style:
+  colors:
+    oversized: danger
+    To get the health status of VM: good
+    To get some basic information of VM: good
+    To get some more information of VM like System Host Name, Cluster Name: good
+
+templates:
+  kick_off: |
+      {
+        "text": "{@b}{id}{/b} ",
+        "parts":[
+          {
+            "title": "{title1}",
+            "text": "{severity1}",
+            "color": "{severity1|color}",
+            "fields":[
+              {
+                "value": "{affectedService.name}"
+              }
+            ]
+          },
+          {
+            "title": "{title2}",
+            "text": "{severity2}",
+            "color": "{severity2|color}",
+            "fields": [
+               {
+                 "title": "{title3}",
+                 "value": "{severity3}"
+               },
+               {
+                 "title": "{title4}",
+                 "value": "{severity4}"
+               },
+               {
+                 "value": "{affectedService.name}"
+               }
+            ]
+          }
+        ]
+      }
+# templates:
+#   kick_off: |
+#     {
+#       "parts":[
+#         {
+#           "title": "{title1}",
+#           "text": "{description1}",
+#           "color": "{description1|color}",
+#         },
+#         {
+#           "title": "{title2}",
+#           "text": "{description2}",
+#           "color": "{description2|color}",
+#         },
+#         {
+#           "title": "{title3}",
+#           "text": "{description3}",
+#           "color": "{description3|color}",
+#         },
+#         {
+#           "title": "{title4}",
+#           "text": "{description4}",
+#           "color": "{description4|color}",
+#         },
+#         {
+#           "title": "{title5}"
+#         }
+#
+#       ]
+#     }
