@@ -4,6 +4,8 @@ labels:
 style:
   colors:
     oversized: danger
+    undersized: danger
+    rightsized: good
     To get the health status of VM: good
     To get some basic information of VM: good
     To get some more information of VM like System Host Name, Cluster Name: good
