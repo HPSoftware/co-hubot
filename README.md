@@ -2,11 +2,11 @@
 
 This is a project to enable users of HPE Cloud Optimizer to connect CO to Slack. It contains the source code for a Hubot integration. Currently, the integration covers three use cases:
 
-1. co showhealth #{name_of_VM} : This command will give health status of VM you want. This will give health status, memory status, power status, cpu status, instance URL
+1. co vmhealth #{name_of_VM} : This command will give health status of VM you want. This will give health status, memory status, power status, cpu status, instance URL
 
-2. co showinfo #{name of VM}: This command will give basic information of VM you want. This will give memory size, CPU size and it will also show what is the current CPU Allocation and what is the recommended CPU Allocation.
+2. co vminfo #{name of VM}: This command will give basic information of VM you want. This will give memory size, CPU size and it will also show what is the current CPU Allocation and what is the recommended CPU Allocation.
 
-3. co showlocation  #{name of VM}: This command will give location information about VM like cluster name, system host name.
+3. co vmlocation  #{name of VM}: This command will give location information about VM like cluster name, system host name.
 
 Note: {co help} will display all the available commands.
 
