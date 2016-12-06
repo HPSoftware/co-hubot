@@ -14,7 +14,7 @@ module.exports = (robot) ->
    rejectUnauthorized = config.rejectUnauthorized
    configTargetServer = COProtocol + "://" + COHost + ":" + COPort + "/PV/api/v1/" ;
 
-   robot.hear /co showinfo (.*)/i, (msg) ->
+   robot.hear /co vminfo (.*)/i, (msg) ->
       search = msg.match[1]
       process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
       msg.http(configTargetServer +  "vm/?name=#{search}")
@@ -41,7 +41,7 @@ module.exports = (robot) ->
 
 
 #More Info like SystemHostName and CLusterName
-    robot.hear /co showlocation (.*)/i, (msg) ->
+    robot.hear /co vmlocation (.*)/i, (msg) ->
       search = msg.match[1]
       process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
       msg.http(configTargetServer +  "vm/?name=#{search}")
@@ -57,7 +57,7 @@ module.exports = (robot) ->
 
 
 # Health Status of VM
-    robot.hear /co showhealth (.*)/i, (msg) ->
+    robot.hear /co vmhealth (.*)/i, (msg) ->
       process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
       name = msg.match[1]
       data = JSON.stringify ({
